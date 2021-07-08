@@ -187,13 +187,14 @@ export class WhatsAppController{
                 height: '100%'
             });
 
-            let _camera = new CameraController(this.el.videoCamera);
+            this._camera = new CameraController(this.el.videoCamera);
         });
 
         this.el.btnClosePanelCamera.on('click', e=>{
 
             this.closeAllMainPanel();
             this.el.panelMessagesContainer.show();
+            this._camera.stop()
         });
 
         this.el.btnTakePicture.on('click', e=>{
