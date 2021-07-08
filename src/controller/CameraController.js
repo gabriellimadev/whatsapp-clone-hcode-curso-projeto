@@ -1,4 +1,4 @@
-class CameraController{
+export class CameraController{
 
     constructor(videoEl) {
         
@@ -11,7 +11,7 @@ class CameraController{
             let mediaStream = new MediaStream(stream);
             this._videoEl.srcObject = mediaStream;
             this._videoEl.play();
-            
+
         }).catch(err=>{
             console.error(err);
         })
